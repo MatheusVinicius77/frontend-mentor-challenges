@@ -2,9 +2,6 @@
 
 This is a solution to the [3-column preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -27,5 +24,5 @@ Users should be able to:
 
 ### What I learned
 
-Fiz este desafio na intenção de praticar minhas habilidades em css grid. Entretanto, ao longo dele, encontrei desafios em deixá-lo responsivel, e pude aprender coisas além do css grid, como por em prática funções como o min() e max().
+Fiz esse desafio com o objetivo de aprimorar minhas habilidades em CSS Grid. No entanto, ao longo do processo, enfrentei desafios ao torná-lo responsivo e, dessa forma, tive a oportunidade de aplicar conceitos além do CSS Grid, como as funções min() e max().
 
