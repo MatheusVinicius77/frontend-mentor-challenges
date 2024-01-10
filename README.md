@@ -22,7 +22,3 @@ This is a solution to the [Results summary component challenge on Frontend Mento
 - Flexbox
 - CSS Grid
 
-## Author
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
