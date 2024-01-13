@@ -12,166 +12,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap"
     rel="stylesheet">
   <title>Frontend Mentor | [Challenge Name Here]</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-
-      /* Primary*/
-      --moderate-violet: hsl(263, 55%, 52%);
-      --dark-grayish-blue: hsl(217, 19%, 35%);
-      --dark-blackish-blue: hsl(219, 29%, 14%);
-      --white: hsl(0, 0%, 100%);
-
-
-      /* Neutral */
-
-      --light-gray: hsl(0, 0%, 81%);
-      --light-grayish-blue: hsl(210, 46%, 95%);
-    }
-
-
-    body {
-      font-size: 13px;
-      font-family: 'Barlow Semi Condensed', sans-serif;
-      background-color: var(--light-grayish-blue);
-      display: grid;
-      place-content: center;
-      min-height: 100vh;
-    }
-
-    main {
-      display: grid;
-      gap: 2rem;
-      max-width: 72rem;
-
-    }
-
-
-
-    article {
-      padding: 2rem;
-      border-radius: 0.6rem;
-      box-shadow: 1px 1px 15px var(--light-gray)
-    }
-
-    article:nth-child(1) {
-      background: url(./images/bg-pattern-quotation.svg) no-repeat right var(--moderate-violet);
-      grid-column: span 2;
-    }
-
-    article:nth-child(2) {
-      background-color: var(--dark-grayish-blue);
-    }
-
-    article:nth-child(3) {
-      background-color: var(--white);
-    }
-
-    article:nth-child(4) {
-      background-color: var(--dark-blackish-blue);
-      grid-column: span 2;
-
-    }
-
-    article:nth-child(5) {
-      background-color: var(--white);
-    }
-
-
-    .user-info {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .user-info img {
-      width: 2rem;
-      border-radius: 100%;
-      aspect-ratio: 1;
-    }
-
-
-
-    .dark-bg-info p:nth-child(1),
-    .dark-bg h2 {
-      color: var(--white);
-    }
-
-    .dark-bg>p {
-      color: var(--white);
-      opacity: 50%;
-      margin-top: 1.5rem;
-    }
-
-    .dark-bg-info p:nth-child(2) {
-      color: var(--white);
-      opacity: 50%;
-    }
-
-    .light-bg-info p:nth-child(1),
-    .light-bg h2 {
-      color: var(--dark-grayish-blue);
-    }
-
-    .light-bg-info p:nth-child(2) {
-      color: var(--dark-blackish-blue);
-      opacity: 50%;
-    }
-
-    .light-bg>p {
-      color: var(--dark-blackish-blue);
-      line-height: 1.4;
-      margin-top: 1.5rem;
-      opacity: 50%;
-    }
-
-    @media screen and (min-width:60rem) {
-
-      main {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-      }
-
-      article:nth-child(5) {
-        grid-area: 1/4/3/4;
-      }
-
-    }
-
-    @media screen and (max-width:50rem) {
-      body {
-        display: grid;
-      }
-
-
-      main {
-        grid-template-columns: 1fr;
-        margin: min(4.5rem, 5vw);
-        margin-top: 4rem;
-        max-width: 75%;
-        min-width: 21rem;
-        justify-self: center;
-      }
-
-      .dark-bg,
-      .light-bg {
-        grid-column: span 2;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <main class="container">
     <article class="dark-bg">
       <div class="user-info">
-        <img src="images/image-daniel.jpg" alt="">
+        <img class="border-user" src="images/image-daniel.jpg" alt="">
         <div class="dark-bg-info">
           <p>
             Daniel Clifford
@@ -247,7 +95,7 @@
 
     <article class="dark-bg">
       <div class="user-info ">
-        <img src="images/image-patrick.jpg" alt="">
+        <img class="border-user" src="images/image-patrick.jpg" alt="">
         <div class="dark-bg-info">
 
           <p>
