@@ -67,6 +67,8 @@ article:nth-child(4) {
 
 article:nth-child(5) {
     background-color: var(--white);
+    grid-column: span 2;
+
 }
 
 
@@ -122,7 +124,6 @@ article:nth-child(5) {
 }
 
 @media screen and (min-width:60rem) {
-
     main {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
@@ -136,16 +137,18 @@ article:nth-child(5) {
 @media screen and (max-width:50rem) {
     body {
         display: grid;
+        justify-items: center;
+    }
+
+    article:nth-child(1) {
+        background-position: right 5px top 0px;
     }
 
 
     main {
         grid-template-columns: 1fr;
-        margin: min(4.5rem, 5vw);
-        margin-top: 4rem;
         max-width: 75%;
-        min-width: 21rem;
-        justify-self: center;
+
     }
 
     .dark-bg,
