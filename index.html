@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Results summary component</title>
+
+
+  <style>
+    @import url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+
+    :root {
+      --white: hsl(0, 0%, 100%);
+      --pale-blue: hsl(221, 100%, 96%);
+      --light-lavender: hsl(241, 100%, 89%);
+      --dark-gray-blue: hsl(224, 30%, 27%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-size: 62.5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    main {
+      box-shadow: 1rem 1rem 1rem 0.2rem var(--pale-blue);
+      width: 70%;
+      min-width: 50rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+
+    #test-result {
+      background: linear-gradient(to bottom, hsla(252, 100%, 67%, 1), hsla(241, 81%, 54%, 1) 85%);
+      text-align: center;
+      border-radius: 2.8rem;
+      padding-top: 3rem;
+    }
+
+    #pontuation-circle {
+      --padding-circle: 2.4rem;
+      border-radius: 100%;
+      width: calc(90% / 2 + var(--padding-circle));
+      margin: 2rem auto;
+      max-width: 18rem;
+      padding: var(--padding-circle);
+      background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1) 35%, hsla(241, 72%, 46%, 0));
+    }
+
+
+    #test-result h2 {
+      color: var(--light-lavender);
+      font-size: 1.6rem;
+    }
+
+    #test-result>p:nth-child(3) {
+      color: var(--white);
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    #test-result>p:nth-child(4) {
+      color: var(--light-lavender);
+      font-size: 1.4rem;
+      opacity: 0.7;
+      font-weight: bold;
+      width: 65%;
+      margin: 2rem auto;
+    }
+
+    #user-pontuation {
+      font-size: 6rem;
+      color: var(--white);
+      font-weight: bold;
+    }
+
+    #geral-pontuation {
+      color: var(--light-lavender);
+      font-size: 1.4rem;
+      opacity: 0.6;
+      font-weight: bold;
+    }
+
+    #test-summary {
+      background-color: var(--white);
+      padding: 2rem 2rem 2rem calc(2rem);
+      padding: 2.5rem;
+    }
+
+
+    #test-summary h2 {
+      color: var(--dark-gray-blue);
+      font-size: 1.8rem;
+    }
+
+    #summary-pontuation>div {
+      font-size: 1.5rem;
+      display: flex;
+      padding: 1rem;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 0.8rem;
+    }
+
+    #summary-pontuation img {
+      aspect-ratio: 1;
+      width: 1.5rem;
+    }
+
+    #summary-pontuation>div>p:nth-child(2) {
+      flex: 1;
+    }
+
+    #summary-pontuation>div>p:nth-child(3) {
+      color: var(--dark-gray-blue);
+      font-weight: bold;
+    }
+
+
+    #summary-pontuation .geral-pontuation {
+      color: var(--dark-gray-blue);
+      opacity: 0.6;
+      font-weight: bold;
+
+    }
+
+    #reaction-pontuation {
+      background-color: rgba(255, 87, 87, 0.06);
+      margin-top: 2.2rem;
+      color: rgba(255, 87, 87, 1);
+    }
+
+    #memory-pontuation {
+      background-color: hsla(39, 100%, 56%, 0.06);
+      color: hsla(39, 100%, 56%, 1);
+
+    }
+
+    #verbal-pontuation {
+      background-color: hsl(166, 100%, 37%, 0.06);
+      color: hsl(166, 100%, 37%, 1);
+
+    }
+
+    #visual-pontuation {
+      background-color: hsl(234, 85%, 45%, 0.06);
+      color: hsl(234, 85%, 45%, 1);
+    }
+
+    #test-summary button {
+      width: 100%;
+      padding: 1.5rem 0;
+      border-radius: 2rem;
+      border: none;
+      color: var(--white);
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-top: 5rem;
+      background-color: var(--dark-gray-blue);
+      transition: background-gradient 1000ms;
+      cursor: pointer;
+    }
+
+    #test-summary button:hover {
+      background: linear-gradient(to bottom, hsla(252, 100%, 67%, 1), hsla(241, 81%, 54%, 1) 85%);
+    }
+
+
+    @media only screen and (max-width:780px) {
+      main {
+        grid-template-columns: 1fr;
+        min-width: 0rem;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div id="test-result">
+      <h2>Your Result</h2>
+      <div id="pontuation-circle">
+        <p id="user-pontuation">76</p>
+        <p id="geral-pontuation">of 100</p>
+      </div>
+      <p>Great</p>
+      <p>You scored higher than 65% of the people who have taken these tests</p>
+    </div>
+
+    <div id="test-summary">
+      <h2>Summary</h2>
+      <div id="summary-pontuation">
+        <div id="reaction-pontuation">
+          <img src="assets/images/icon-reaction.svg" alt="a thunder icon">
+          <p>Reaction</p>
+          <p>80</p>
+          <p class="geral-pontuation">/ 100</p>
+        </div>
+        <div id="memory-pontuation">
+          <img src="assets/images/icon-memory.svg" alt="a brain icon">
+          <p>Memory</p>
+          <p>92</p>
+          <p class="geral-pontuation">/ 100</p>
+        </div>
+        <div id="verbal-pontuation">
+          <img src="assets/images/icon-verbal.svg" alt="a thunder icon">
+          <p>Verbal</p>
+          <p>61</p>
+          <p class="geral-pontuation">/ 100</p>
+        </div>
+        <div id="visual-pontuation">
+          <img src="assets/images/icon-visual.svg" alt="a thunder icon">
+          <p>Visual</p>
+          <p>72</p>
+          <p class="geral-pontuation">/ 100</p>
+        </div>
+      </div>
+      <button>Continue</button>
+    </div>
+
+  </main>
+</body>
+
+</html>
