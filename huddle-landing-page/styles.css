@@ -125,6 +125,8 @@ header {
 
 main {
     position: relative;
+    overflow-x: hidden;
+
 }
 
 section {
