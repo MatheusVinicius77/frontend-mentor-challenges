@@ -125,8 +125,6 @@ header {
 
 main {
     position: relative;
-    overflow-x: hidden;
-
 }
 
 section {
@@ -139,7 +137,6 @@ section {
     border-radius: 0.4rem;
     box-shadow: 0 0 6px rgba(128, 128, 128, 0.201);
     margin: 4rem;
-    min-width: 30rem;
 }
 
 
@@ -158,6 +155,8 @@ section div {
 
 section div img {
     width: 100%;
+    overflow: hidden;
+
 }
 
 footer {
